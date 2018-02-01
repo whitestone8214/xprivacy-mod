@@ -13,13 +13,13 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Process;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
 @SuppressLint("Registered")
-public class ActivityBase extends AppCompatActivity {
+public class ActivityBase extends Activity {
 	private int mThemeId;
 	private Bitmap[] mCheck = null;
 

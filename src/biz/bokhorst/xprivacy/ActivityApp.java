@@ -41,8 +41,8 @@ import android.provider.ContactsContract.CommonDataKinds.GroupMembership;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
-import android.support.v7.widget.SwitchCompat;
-import android.support.v7.widget.Toolbar;
+import android.widget.Switch;
+import android.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
@@ -71,7 +71,7 @@ import android.widget.Toast;
 
 public class ActivityApp extends ActivityBase {
 	private ApplicationInfoEx mAppInfo = null;
-	private SwitchCompat swEnabled = null;
+	private Switch swEnabled = null;
 	private RestrictionAdapter mPrivacyListAdapter = null;
 
 	public static final String cUid = "Uid";
@@ -121,7 +121,7 @@ public class ActivityApp extends ActivityBase {
 
 		// Set layout
 		setContentView(R.layout.restrictionlist);
-		setSupportActionBar((Toolbar) findViewById(R.id.widgetToolbar));
+		//setActionBar((Toolbar) findViewById(R.id.widgetToolbar));
 
 		// Annotate
 		Meta.annotate(this.getResources());
@@ -145,7 +145,7 @@ public class ActivityApp extends ActivityBase {
 		}
 
 		// Set sub title
-		getSupportActionBar().setSubtitle(TextUtils.join(", ", mAppInfo.getApplicationName()));
+		getActionBar().setSubtitle(TextUtils.join(", ", mAppInfo.getApplicationName()));
 
 		// Handle info click
 		ImageView imgInfo = (ImageView) findViewById(R.id.imgInfo);
@@ -206,7 +206,7 @@ public class ActivityApp extends ActivityBase {
 			imgCbOnDemand.setVisibility(View.GONE);
 
 		// Display restriction state
-		swEnabled = (SwitchCompat) findViewById(R.id.swEnable);
+		swEnabled = (Switch) findViewById(R.id.swEnable);
 		swEnabled.setChecked(PrivacyManager.getSettingBool(mAppInfo.getUid(), PrivacyManager.cSettingRestricted, true));
 		swEnabled.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
@@ -305,7 +305,7 @@ public class ActivityApp extends ActivityBase {
 		mPackageChangeReceiverRegistered = true;
 
 		// Up navigation
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		// Tutorial
 		if (!PrivacyManager.getSettingBool(userId, PrivacyManager.cSettingTutorialDetails, false)) {

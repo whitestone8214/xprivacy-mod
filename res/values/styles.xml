@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="CustomTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/color_primary1_dark</item>
-        <item name="colorPrimaryDark">@color/color_primary2_dark</item>
-        <item name="colorAccent">@color/color_accent_dark</item>
+    <style name="CustomTheme">
         <item name="icon_granted">@drawable/granted_holo_dark</item>
         <item name="icon_info">@drawable/info_holo_dark</item>
         <item name="icon_info_book">@drawable/info_book_holo_dark</item>
@@ -27,14 +24,10 @@
         <item name="color_state_shared">@color/color_state_shared_dark</item>
         <item name="progress_horizontal" format="reference">@drawable/progress_horizontal_dark</item>
         <item name="background_tutorial">@drawable/tutorial_background_dark</item>
-        <item name="cardStyle">@style/CardView.Dark</item>
         <item name="list_item_pressed">@drawable/list_item_pressed_dark</item>
     </style>
 
-    <style name="CustomTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/color_primary1_light</item>
-        <item name="colorPrimaryDark">@color/color_primary2_light</item>
-        <item name="colorAccent">@color/color_accent_light</item>
+    <style name="CustomTheme.Light">
         <item name="icon_granted">@drawable/granted_holo_light</item>
         <item name="icon_info">@drawable/info_holo_light</item>
         <item name="icon_info_book">@drawable/info_book_holo_light</item>
@@ -57,7 +50,6 @@
         <item name="color_state_shared">@color/color_state_shared_light</item>
         <item name="progress_horizontal" format="reference">@drawable/progress_horizontal_light</item>
         <item name="background_tutorial">@drawable/tutorial_background_light</item>
-        <item name="cardStyle">@style/CardView.Light</item>
         <item name="list_item_pressed">@drawable/list_item_pressed_light</item>
     </style>
 

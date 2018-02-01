@@ -4,12 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <android.support.v7.widget.Toolbar
+    <Toolbar
         android:id="@+id/widgetToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize" />
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -184,7 +182,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textIsSelectable="false" />
 
-            <android.support.v7.widget.SwitchCompat
+            <Switch
                 android:id="@+id/swEnable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

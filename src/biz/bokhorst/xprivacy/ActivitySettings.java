@@ -16,7 +16,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Process;
-import android.support.v7.widget.Toolbar;
+import android.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -99,7 +99,7 @@ public class ActivitySettings extends ActivityBase implements OnCheckedChangeLis
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.settings);
-		setSupportActionBar((Toolbar) findViewById(R.id.widgetToolbar));
+		//setActionBar((Toolbar) findViewById(R.id.widgetToolbar));
 		setTitle(R.string.menu_settings);
 
 		userId = Util.getUserId(Process.myUid());
@@ -308,7 +308,7 @@ public class ActivitySettings extends ActivityBase implements OnCheckedChangeLis
 		} else {
 			// Display application names
 			ApplicationInfoEx appInfo = new ApplicationInfoEx(this, uid);
-			getSupportActionBar().setSubtitle(TextUtils.join(",  ", appInfo.getApplicationName()));
+			getActionBar().setSubtitle(TextUtils.join(",  ", appInfo.getApplicationName()));
 
 			// Disable global settings
 			cbUsage.setVisibility(View.GONE);

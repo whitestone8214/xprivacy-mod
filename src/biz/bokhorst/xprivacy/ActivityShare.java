@@ -69,7 +69,7 @@ import android.os.Process;
 import android.provider.ContactsContract;
 import android.provider.Settings.Secure;
 import android.support.v4.app.NotificationCompat;
-import android.support.v7.widget.Toolbar;
+import android.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
@@ -191,7 +191,7 @@ public class ActivityShare extends ActivityBase {
 
 		// Set layout
 		setContentView(R.layout.sharelist);
-		setSupportActionBar((Toolbar) findViewById(R.id.widgetToolbar));
+		//setActionBar((Toolbar) findViewById(R.id.widgetToolbar));
 
 		// Reference controls
 		final TextView tvDescription = (TextView) findViewById(R.id.tvDescription);
@@ -210,19 +210,19 @@ public class ActivityShare extends ActivityBase {
 		// Set title
 		if (action.equals(ACTION_TOGGLE)) {
 			mActionId = R.string.menu_toggle;
-			getSupportActionBar().setSubtitle(R.string.menu_toggle);
+			getActionBar().setSubtitle(R.string.menu_toggle);
 		} else if (action.equals(ACTION_IMPORT)) {
 			mActionId = R.string.menu_import;
-			getSupportActionBar().setSubtitle(R.string.menu_import);
+			getActionBar().setSubtitle(R.string.menu_import);
 		} else if (action.equals(ACTION_EXPORT)) {
 			mActionId = R.string.menu_export;
-			getSupportActionBar().setSubtitle(R.string.menu_export);
+			getActionBar().setSubtitle(R.string.menu_export);
 		} else if (action.equals(ACTION_FETCH)) {
 			mActionId = R.string.menu_fetch;
-			getSupportActionBar().setSubtitle(R.string.menu_fetch);
+			getActionBar().setSubtitle(R.string.menu_fetch);
 		} else if (action.equals(ACTION_SUBMIT)) {
 			mActionId = R.string.menu_submit;
-			getSupportActionBar().setSubtitle(R.string.menu_submit);
+			getActionBar().setSubtitle(R.string.menu_submit);
 		} else {
 			finish();
 			return;

@@ -5,12 +5,10 @@
     <item
         android:id="@+id/menu_cancel"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
-        android:title="@android:string/cancel"
-        app:showAsAction="always"/>
+        android:title="@android:string/cancel" />
     <item
         android:id="@+id/menu_save"
         android:icon="@android:drawable/ic_menu_save"
-        android:title="@android:string/ok"
-        app:showAsAction="always"/>
+        android:title="@android:string/ok" />
 
 </menu>

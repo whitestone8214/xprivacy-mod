@@ -6,12 +6,10 @@
     android:orientation="vertical"
     tools:ignore="HardcodedText,TooManyViews,Overdraw" >
 
-    <android.support.v7.widget.Toolbar
+    <Toolbar
         android:id="@+id/widgetToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize" />
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"

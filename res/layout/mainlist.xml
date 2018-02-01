@@ -6,12 +6,10 @@
     android:orientation="vertical"
     tools:context=".ActivityMain" >
 
-    <android.support.v7.widget.Toolbar
+    <Toolbar
         android:id="@+id/widgetToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize" />
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,15 +31,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <android.support.v7.widget.CardView
+                <LinearLayout
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cvHeader"
                     style="?attr/cardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dip"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    card_view:cardCornerRadius="6dip" >
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -68,7 +65,7 @@
                             android:focusable="true"
                             android:src="?attr/icon_info" />
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
 
             <ScrollView
@@ -152,8 +149,7 @@
             android:id="@+id/vProgressFull"
             android:layout_width="0dip"
             android:layout_height="3dip"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:background="?attr/colorAccent" />
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
 
         <!-- What it is all about -->
 
